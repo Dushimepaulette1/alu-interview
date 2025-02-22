@@ -20,7 +20,7 @@ def pascal_triangle(n):
     for i in range(1, n):
         row = [1]  # Start each row with 1
 
-        # Compute the inner values by summing adjacent values from the previous row
+        # Compute the inner values by summing adjacent values
         for j in range(1, i):
             row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
 
@@ -28,4 +28,3 @@ def pascal_triangle(n):
         triangle.append(row)  # Add the computed row to the triangle
 
     return triangle
-
